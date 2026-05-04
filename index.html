@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MURAT USTA</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Georgia, serif;
+color:white;
+overflow-x:hidden;
+}
+
+/* VIDEO */
+
+.video-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+filter:brightness(1.25) contrast(1.2) saturate(1.3);
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.25);
+z-index:-1;
+}
+
+/* HEADER */
+
+.header{
+text-align:center;
+padding:25px 10px 5px 10px;
+}
+
+.header h1{
+font-size:60px;
+letter-spacing:6px;
+margin:0;
+
+background:linear-gradient(90deg,#ffcc70,#ff8c00,#ff3c00,#ff0000,#ff8c00,#ffcc70);
+background-size:300%;
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:atesyuru 6s linear infinite;
+}
+
+@keyframes atesyuru{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+.header p{
+font-size:22px;
+margin-top:8px;
+letter-spacing:2px;
+}
+
+/* HERO */
+
+.hero{
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+width:100%;
+box-sizing:border-box;
+
+padding:0 20px;
+
+gap:30px;
+
+margin-top:10px;
+
+flex-wrap:nowrap;
+}
+
+/* PANEL */
+
+.panel{
+
+flex:1;
+max-width:340px;
+min-width:220px;
+
+height:380px;
+
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(10px);
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.8);
+
+padding:18px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* VİZYON */
+
+.vision h2{
+text-align:center;
+margin-bottom:15px;
+letter-spacing:2px;
+}
+
+#vizyonYazi{
+font-size:15px;
+line-height:1.5;
+text-align:center;
+}
+
+/* RESİM */
+
+.image-panel{
+align-items:center;
+justify-content:center;
+}
+
+.image-panel img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* ORDER PANEL */
+
+.order-panel{
+gap:12px;
+}
+
+.order-panel a{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+text-decoration:none;
+color:white;
+
+padding:12px;
+
+border-radius:10px;
+
+font-weight:bold;
+
+transition:0.3s;
+}
+
+.order-panel img{
+width:22px;
+}
+
+.phone{background:rgba(255,255,255,0.15);}
+.whatsapp{background:rgba(37,211,102,0.45);}
+.instagram{background:rgba(225,48,108,0.45);}
+.trendyol{background:rgba(255,120,0,0.55);}
+.yemeksepeti{background:rgba(255,0,120,0.55);}
+.getir{background:rgba(20,30,90,0.65);}
+
+.order-panel a:hover{
+transform:scale(1.05);
+}
+
+/* MENÜ BUTONU */
+
+.menu-btn{
+
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+
+padding:16px 50px;
+
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+
+text-decoration:none;
+color:white;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#ffcc00,#ff7b00,#ff0000,#ff7b00,#ffcc00);
+background-size:300%;
+
+animation:ates 4s linear infinite,
+ziplama 1.5s ease-in-out infinite;
+
+box-shadow:
+0 0 15px rgba(255,120,0,0.9),
+0 0 40px rgba(255,60,0,0.7),
+0 0 70px rgba(255,0,0,0.5);
+
+z-index:1000;
+}
+
+.menu-btn:hover{
+transform:translateX(-50%) scale(1.08);
+}
+
+@keyframes ates{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+@keyframes ziplama{
+0%{bottom:30px;}
+50%{bottom:40px;}
+100%{bottom:30px;}
+}
+
+/* TABLET */
+
+@media (max-width:1000px){
+
+.header h1{
+font-size:48px;
+}
+
+.header p{
+font-size:18px;
+}
+
+.panel{
+height:auto;
+}
+
+}
+
+/* TELEFON */
+
+@media (max-width:600px){
+
+.header h1{
+font-size:34px;
+letter-spacing:3px;
+}
+
+.header p{
+font-size:15px;
+}
+
+.hero{
+gap:15px;
+}
+
+.panel{
+min-width:180px;
+max-width:260px;
+}
+
+.menu-btn{
+font-size:18px;
+padding:14px 35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-bg">
+<source src="arka.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="header">
+<h1>MURAT USTA</h1>
+<p>Kokoreç Söğüş & Sokak Lezzetleri</p>
+</div>
+
+<div class="hero">
+
+<div class="panel vision">
+
+<h2>BU LEZZETİ HERKES BİLİR</h2>
+
+<p id="vizyonYazi"></p>
+
+</div>
+
+<div class="panel image-panel">
+
+<img src="murat.png">
+
+</div>
+
+<div class="panel order-panel">
+
+<a class="phone" href="tel:+905019360323">
+<img src="https://cdn-icons-png.flaticon.com/512/159/159832.png">
+Telefon
+</a>
+
+<a class="whatsapp" href="https://wa.me/905019360323">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+WhatsApp
+</a>
+
+<a class="instagram" href="https://instagram.com/izmirmuratusta">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+Instagram
+</a>
+
+<a class="trendyol" href="https://tgoyemek.com/restoranlar/436743">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png">
+Trendyol GO
+</a>
+
+<a class="yemeksepeti" href="https://yemek.go.link/7iaqK">
+<img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+Yemeksepeti
+</a>
+
+<a class="getir" href="https://getir.com/restaurant=69a9a8fc773272bb0cdb7d76">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png">
+Getir Yemek
+</a>
+
+</div>
+
+</div>
+
+<a href="menu.html" class="menu-btn">MENÜMÜZ</a>
+
+<script>
+
+const text="40 yıldır mangalın başında yılların verdiği tecrübe ile yaktığımız ateşten lezzet çıkarıyoruz. Közün sıcaklığı, ustalığın tecrübesi ve doğru pişirme teknikleri ile her lokmada gerçek mangal lezzetini yaşatıyoruz. Her ürünümüzde en taze malzemeleri kullanır, lezzetin sırrını gerçek mangal ve ızgara kültüründen alırız. Kokoreçten söğüşe, sucuk ekmekten köfte ve sandviçlere kadar tüm sokak lezzetlerini aynı özenle hazırlıyoruz. Yılların ustalığı ile hazırlanan bu eşsiz lezzetleri dijital mutfağımızdan paket servis ile sofralarınıza getiriyoruz.";
+
+let i=0;
+
+function yaz(){
+
+if(i<text.length){
+
+document.getElementById("vizyonYazi").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(yaz,30);
+
+}
+
+}
+
+yaz();
+
+</script>
+
+</body>
+</html>

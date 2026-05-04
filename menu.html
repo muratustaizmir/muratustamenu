@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MURAT USTA MENÜ</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Georgia, serif;
+color:white;
+}
+
+.video-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+filter:brightness(1.2) contrast(1.2);
+}
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:-1;
+}
+
+.header{
+text-align:center;
+padding:40px 20px;
+}
+
+.header h1{
+font-size:60px;
+letter-spacing:6px;
+background:linear-gradient(90deg,#ffd000,#ff7b00,#ff0000,#ff7b00,#ffd000);
+background-size:300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:ates 6s linear infinite;
+}
+
+@keyframes ates{
+0%{background-position:0%;}
+100%{background-position:300%;}
+}
+
+.menu-container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+background:rgba(0,0,0,0.4);
+border-radius:15px;
+box-shadow:0 0 25px rgba(255,100,0,0.4);
+}
+
+.category{
+font-weight:bold;
+text-align:center;
+padding:15px;
+cursor:pointer;
+margin-top:10px;
+border-radius:10px;
+}
+
+/* BAŞLIK RENKLERİ */
+.category.kokorec{background:linear-gradient(90deg,#ff0000,#ff4d00);}
+.category.kofte{background:linear-gradient(90deg,#7a0000,#b30000);}
+.category.tavuk{background:linear-gradient(90deg,#ffcc00,#ff8800);}
+.category.sogus{background:linear-gradient(90deg,#ffffff,#cfcfcf);color:#222;}
+.category.cool{background:linear-gradient(90deg,#00c6ff,#0072ff);}
+
+.content{
+display:none;
+margin-top:10px;
+}
+
+.item{
+display:flex;
+align-items:center;
+background:rgba(0,0,0,0.6);
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.item img{
+width:65px;
+height:65px;
+border-radius:8px;
+margin-right:10px;
+object-fit:cover;
+}
+
+.item-info{
+flex:1;
+}
+
+.price{
+padding:6px 12px;
+border-radius:8px;
+font-weight:bold;
+background:#ff5a00;
+}
+
+/* ITEM RENKLERİ */
+.kokorec-item{background:rgba(255,60,0,0.15);border:1px solid rgba(255,80,0,0.4);}
+.kofte-item{background:rgba(150,20,0,0.15);border:1px solid rgba(180,30,0,0.4);}
+.tavuk-item{background:rgba(255,200,0,0.15);border:1px solid rgba(255,180,0,0.4);}
+.sogus-item{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);}
+.cool-item{background:rgba(0,140,255,0.15);border:1px solid rgba(0,180,255,0.4);}
+
+/* İÇECEKLER (ZATEN VARDI) */
+.cool-price{
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+color:white;
+}
+
+/* 🔥 YENİ: FİYATLAR KATEGORİYLE AYNI RUH */
+.category.kokorec + .content .price{
+background:linear-gradient(90deg,#ff0000,#ff4d00);
+}
+
+.category.kofte + .content .price{
+background:linear-gradient(90deg,#7a0000,#b30000);
+}
+
+.category.tavuk + .content .price{
+background:linear-gradient(90deg,#ffcc00,#ff8800);
+color:#222;
+}
+
+.category.sogus + .content .price{
+background:linear-gradient(90deg,#ffffff,#cfcfcf);
+color:#222;
+}
+
+.category.cool + .content .price{
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<video autoplay muted loop class="video-bg">
+<source src="arka.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="header">
+<h1>EŞSİZ LEZZETLERİMİZ</h1>
+</div>
+
+<div class="menu-container">
+
+<!-- KOKOREÇ -->
+<div class="category kokorec" onclick="toggleMenu(this)">KOKOREÇ</div>
+<div class="content">
+
+<div class="item kokorec-item"><img src="ceyrek.jpg"><div class="item-info">Çeyrek Ekmek Kokoreç</div><div class="price">00 TL</div></div>
+<div class="item kokorec-item"><img src="yarim.jpg"><div class="item-info">Yarım Ekmek Kokoreç</div><div class="price">00 TL</div></div>
+<div class="item kokorec-item"><img src="ucdort.jpg"><div class="item-info">3/4 Ekmek Kokoreç</div><div class="price">00 TL</div></div>
+<div class="item kokorec-item"><img src="tam.jpg"><div class="item-info">Tam Ekmek Kokoreç</div><div class="price">00 TL</div></div>
+<div class="item kokorec-item"><img src="porsiyon.jpg"><div class="item-info">Porsiyon Kokoreç</div><div class="price">00 TL</div></div>
+
+</div>
+
+<!-- SÖĞÜŞ -->
+<div class="category sogus" onclick="toggleMenu(this)">SÖĞÜŞ</div>
+<div class="content">
+
+<div class="item sogus-item"><img src="sogus_durum.jpg"><div class="item-info">Söğüş Dürüm</div><div class="price">00 TL</div></div>
+<div class="item sogus-item"><img src="sogus_porsiyon.jpg"><div class="item-info">Porsiyon Söğüş</div><div class="price">00 TL</div></div>
+
+</div>
+
+<!-- KÖFTE -->
+<div class="category kofte" onclick="toggleMenu(this)">KÖFTE</div>
+<div class="content">
+
+<div class="item kofte-item"><img src="kofte_yarim.jpg"><div class="item-info">Yarım Ekmek Köfte</div><div class="price">00 TL</div></div>
+<div class="item kofte-item"><img src="kofte_tam.jpg"><div class="item-info">Tam Ekmek Köfte</div><div class="price">00 TL</div></div>
+<div class="item kofte-item"><img src="kofte_kasar_yarim.jpg"><div class="item-info">Kaşarlı Köfte Yarım</div><div class="price">00 TL</div></div>
+<div class="item kofte-item"><img src="kofte_kasar_tam.jpg"><div class="item-info">Kaşarlı Köfte Tam</div><div class="price">00 TL</div></div>
+<div class="item kofte-item"><img src="kofte_cheddar_yarim.jpg"><div class="item-info">Cheddarlı Köfte Yarım</div><div class="price">00 TL</div></div>
+<div class="item kofte-item"><img src="kofte_cheddar_tam.jpg"><div class="item-info">Cheddarlı Köfte Tam</div><div class="price">00 TL</div></div>
+
+</div>
+
+<!-- TAVUK -->
+<div class="category tavuk" onclick="toggleMenu(this)">TAVUK IZGARA</div>
+<div class="content">
+
+<div class="item tavuk-item"><img src="tavuk_yarim.jpg"><div class="item-info">Soslu Tavuk Yarım</div><div class="price">00 TL</div></div>
+<div class="item tavuk-item"><img src="tavuk_tam.jpg"><div class="item-info">Soslu Tavuk Tam</div><div class="price">00 TL</div></div>
+<div class="item tavuk-item"><img src="tavuk_sebzeli_yarim.jpg"><div class="item-info">Sebzeli Tavuk Yarım</div><div class="price">00 TL</div></div>
+<div class="item tavuk-item"><img src="tavuk_sebzeli_tam.jpg"><div class="item-info">Sebzeli Tavuk Tam</div><div class="price">00 TL</div></div>
+
+</div>
+
+<!-- İÇECEK -->
+<div class="category cool" onclick="toggleMenu(this)">İÇECEKLER</div>
+<div class="content">
+
+<div class="item cool-item"><img src="cocacola_330.jpg"><div class="item-info">Coca Cola 330ml</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="fanta_330.jpg"><div class="item-info">Fanta 330ml</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="nigde_gazoz.jpg"><div class="item-info">Niğde Gazozu</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="ayran_kucuk.jpg"><div class="item-info">Küçük Ayran</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="ayran_buyuk.jpg"><div class="item-info">Büyük Ayran</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="salgam.jpg"><div class="item-info">Şalgam</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="su_500.jpg"><div class="item-info">Su</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="cocacola_1lt.jpg"><div class="item-info">Coca Cola 1L</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="ayran_1lt.jpg"><div class="item-info">Ayran 1L</div><div class="price cool-price">00 TL</div></div>
+<div class="item cool-item"><img src="su_15lt.jpg"><div class="item-info">Su 1,5L</div><div class="price cool-price">00 TL</div></div>
+
+</div>
+
+</div>
+
+<script>
+function toggleMenu(el){
+let content = el.nextElementSibling;
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
